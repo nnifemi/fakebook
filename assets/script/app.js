@@ -72,7 +72,6 @@ function handleFileSelect() {
         reader.onload = function (e) {
             chosenImage.src = e.target.result;
 
-            // Show the chosen file container
             chosenFileContainer.style.visibility = 'visible';
             chosenFileName.textContent = file.name;
             chosenFileName.style.visibility = 'visible';
@@ -102,17 +101,13 @@ const subscriber = new Subscriber(
 postForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    // Get post text and other form data
     const postContent = postText.value;
 
-    // Check if both post text and image are empty
     if (!(postContent.trim() || chosenImage.src)) {
-        // Display an error by focusing on the textarea
         postText.focus();
-        return; // Prevent further execution
+        return;
     }
 
-    // Create a post header with user information
     const postHeader = document.createElement('div');
     postHeader.className = 'post-header';
 
@@ -127,7 +122,6 @@ postForm.addEventListener('submit', (event) => {
         </div>
     `;
 
-    // Create a post element
     const post = document.createElement('div');
     post.className = 'post';
     post.innerHTML = `
@@ -135,7 +129,6 @@ postForm.addEventListener('submit', (event) => {
         <p>${postContent}</p>
     `;
 
-    // Check if there is a chosen image
     if (chosenImage.src && chosenImage.src !== '#') {
         const postImage = document.createElement('img');
         postImage.src = chosenImage.src;
@@ -146,26 +139,19 @@ postForm.addEventListener('submit', (event) => {
         post.appendChild(postImage);
     }
 
-    // Append the post to the posts section
     postsSection.appendChild(post);
 
-    // Clear the text area after posting
     postText.value = '';
 
-    // Hide the chosen file container
     chosenFileContainer.style.display = 'none';
-    // Clear the chosen image source
     chosenImage.src = '';
 
-    // Clear the chosen filename and hide it
     chosenFileName.textContent = '';
     chosenFileName.style.visibility = 'hidden';
 });
 
-// Event listener for file input change
 imageInput.addEventListener('change', () => {
     document.getElementById('post').disabled = !imageInput.files[0] && !postText.value.trim();
 });
 
-// Event listener for file input change
 imageInput.addEventListener('change', handleFileSelect);
