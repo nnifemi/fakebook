@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Nifemi Leye">
-        <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Nunito+Sans:opsz@6..12&display=swap" 
-        rel="stylesheet">
-        <link rel="stylesheet" href="./assets/style/index.css" media="all">
-        <title>Fakebook</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nifemi Leye">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/index.css" media="all">
+    <link rel="stylesheet" href="./assets/style/reset.css" media="all">
+    <link rel="stylesheet" href="./assets/style/styles.css" media="all">
+    <script type="module" src="./assets/script/app.js" defer></script>
+    <title>Fakebook</title>
 </head>
 <body>
-    <main>
-        
+    <header>
+        <div class="container flexbox">
+            <div>
+                <h2><a href="#">Fakebook</a></h2>
+            </div>
+            <img src="./assets/img/profile-picture.jpg" alt="Profile Pic" class="profile-pic">
+            <nav>
+                <ul>
+                    <li><a href="#">Friends</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">My ads</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="container">
+            <div class="post-form-container">
+                <form id="postForm">
+                    <div class="post-form">
+                        <div class="textarea-container">
+                            <textarea id="postText" placeholder="What's on your mind?"></textarea>
+                            <label for="image" class="custom-file-input">
+                                <i class="far fa-image"></i>
+                            </label>
+                            <input type="file" id="image">
+                            <span id="chosenFileName"></span>
+                        </div>
+                        <button id="post" type="submit" disabled>Post</button>
+
+                    </div>
+                </form>
+            </div>
+            <div id="chosenFileContainer" class="chosen-file-container">
+                <img id="chosenImage" src="#">
+            </div>
+            
+            <section id="postsSection" class="posts-container"></section>
+        </div>
     </main>
 </body>
 </html>
