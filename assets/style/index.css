@@ -1,1 +1,274 @@
 @charset "utf-8";
+@import url(./reset.css);
+
+header {
+    background-color: #1a1d28; 
+    text-align: center;
+    height: 50px;
+    width: 100%;
+}
+
+.flexbox {
+    display: flex;
+}
+
+h2 a {
+    color: #3b92eb;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    width: 80%;
+    letter-spacing: 0.4px;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav {
+    width: 80%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0 10px; 
+    border-radius: 5px; 
+}
+
+nav a:hover {
+    transition: color 0.3s ease-in-out;
+    color: #3b92eb;
+}
+
+form {
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea {
+    font-family: "Nunito Sans", Arial, sans-serif;
+    height: 160px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #1a1d28;
+    color: #fff;
+    padding: 10px;
+    resize: none;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-input {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.post-header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#chosenFileContainer {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+#chosenImage {
+    display: none;
+}
+
+.post img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 5px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+.post-form-container {
+    width: 100%;
+    max-width: 300vh;   
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.post-form {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px; 
+}
+
+.chosen-file-container {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.post-header p {
+    margin: 0;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    font-size: 14px;
+}
+
+.post {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 0 10px #0000001a;
+    border-radius: 8px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    position: relative;
+}
+
+.post img {
+    max-width: 100%;
+    max-height: fit-content;
+    border-radius: 50%; /* Add this line */
+}
+
+.textarea-container {
+    position: relative;
+}
+
+.custom-file-input {
+    position: absolute;
+    background: none;
+    bottom: 18px;
+    left: 2px;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-file-input:hover {
+    color: #2186ec;
+}
+
+
+button#post {
+    position: absolute;
+    bottom: 24px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #3b92eb;
+    color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#post:hover {
+    transition: background-color 0.3s ease-in-out;
+    background-color: #2186ec;
+}
+
+#chosenFileContainer {
+    visibility: hidden;
+}
+
+#chosenFileName {
+    position: absolute;
+    top: 16.7vh;
+    left: 5vh;
+    color: #fff;
+    visibility: hidden;
+}
+
+
+.profile-pic {
+    position: absolute;
+    top: 10px;
+    right: 24vh;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+body::-webkit-scrollbar {
+    width: 8px; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #1a1d28; 
+    border-radius: 6px; 
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #fff;
+}
